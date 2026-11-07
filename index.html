@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Zohaib Gulfam – Full Stack Developer</title>
+<title>Muhammad Zohaib Gulfam – Full Stack Developer &amp; IT Infrastructure Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1028,6 +1028,34 @@ footer {
 .nav-cv-btn::after { display: none !important; }
 .nav-cv-btn svg { width: 14px; height: 14px; fill: currentColor; }
 
+
+/* ===== v2 ADDITIONS ===== */
+.hero h1 .name-highlight{background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 4s linear infinite}
+@keyframes shine{to{background-position:200% 0}}
+.marquee{overflow:hidden;background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:15px 0;position:relative;z-index:3}
+.marquee-track{display:flex;gap:2.5rem;width:max-content;animation:marq 40s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy2);white-space:nowrap;display:flex;align-items:center;gap:2.5rem}
+.marquee-track span::after{content:'◆';color:var(--gold);font-size:8px}
+@keyframes marq{to{transform:translateX(-50%)}}
+.expertise{background:var(--navy);position:relative;overflow:hidden}
+.expertise::before{content:'';position:absolute;width:520px;height:520px;right:-120px;top:-140px;background:radial-gradient(circle,rgba(201,168,76,.12),transparent 70%)}
+.expertise .section-title{color:var(--white)}
+.xp-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.3rem;position:relative}
+.xp-card{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(201,168,76,.18);border-radius:14px;padding:1.8rem 1.6rem;transition:opacity .7s ease,transform .25s ease,border-color .3s,box-shadow .3s;will-change:transform}
+.xp-card:hover{border-color:rgba(201,168,76,.5);box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.xp-ico{font-size:26px;width:54px;height:54px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);margin-bottom:1.1rem}
+.xp-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--white);margin-bottom:.5rem}
+.xp-card p{font-size:13.5px;line-height:1.7;color:rgba(255,255,255,.58)}
+.job-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem;padding-top:.9rem;border-top:1px dashed rgba(0,0,0,.1)}
+.job-tags span{font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:3px 9px;border-radius:2px;background:rgba(201,168,76,.1);color:#8a6d2f;border:1px solid rgba(201,168,76,.22)}
+.job-period.now{background:rgba(74,222,128,.12);color:#15803d}
+.cv-menu{position:relative;display:inline-block}
+.cv-menu button.cv-download-btn{font-family:'DM Sans',sans-serif}
+.cv-drop{position:absolute;left:0;top:100%;margin-top:8px;min-width:240px;background:var(--navy2);border:1px solid var(--border);border-radius:6px;padding:6px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:.2s;z-index:20}
+.cv-menu:hover .cv-drop,.cv-menu:focus-within .cv-drop{opacity:1;visibility:visible;transform:none}
+.cv-drop a{display:block;padding:10px 12px;color:var(--gold-light);font-size:13px;text-decoration:none;border-radius:4px}
+.cv-drop a:hover{background:rgba(201,168,76,.12)}
 </style>
 </head>
 <body>
@@ -1088,7 +1116,7 @@ footer {
   <div class="modal-inner">
     <div class="modal-header">
       <span class="modal-title" id="modalTitle">Project Demo</span>
-      <button class="modal-close" id="modalClose">✕</button>
+      <a id="ytLink" href="#" target="_blank" rel="noopener" style="display:none;margin-left:auto;margin-right:12px;color:var(--gold-light);font-size:12px;text-decoration:none;">Watch on YouTube ↗</a><button class="modal-close" id="modalClose">✕</button>
     </div>
     <div class="modal-video-area">
       <div class="modal-placeholder" id="modalPlaceholder">
@@ -1134,16 +1162,17 @@ footer {
     <p class="hero-role">
       <span class="typed-wrapper"><span class="typed-text" id="typedText"></span><span class="typed-cursor"></span></span>
     </p>
-    <p class="hero-desc">
-      Results-driven Full Stack Developer with 3.5+ years building robust e-commerce platforms, custom modules, and RESTful APIs. Specialized in Magento 2, Laravel, and cloud infrastructure.
-    </p>
+    <p class="hero-desc">Full Stack Developer and IT Infrastructure Engineer with 3.5+ years building Magento 2 and Laravel e-commerce platforms for UK, Saudi and Australian clients — and keeping servers, networks and cloud environments running reliably.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn-primary">Hire Me →</a>
       <a href="#projects" class="btn-outline">View Projects</a>
-      <a href="Muhammad_Zohaib_Gulfam_CV.pdf" download="Muhammad_Zohaib_Gulfam_CV.pdf" class="cv-download-btn">
-        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        <span>Download CV</span>
-      </a>
+      <div class="cv-menu">
+        <button type="button" class="cv-download-btn"><svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg><span>Download CV ▾</span></button>
+        <div class="cv-drop">
+          <a href="Muhammad_Zohaib_Gulfam_CV.pdf" download>Full Stack Developer CV</a>
+          <a href="Muhammad_Zohaib_Gulfam_IT_Infrastructure_CV.pdf" download>IT Infrastructure CV</a>
+        </div>
+      </div>
     </div>
     <div class="hero-stats">
       <div class="stat"><div class="stat-num"><span class="counter-num" data-target="3.5" data-decimal="1">0</span>+</div><div class="stat-label">Years Experience</div></div>
@@ -1154,6 +1183,15 @@ footer {
   </div>
 </section>
 
+<div class="marquee"><div class="marquee-track"><span>Magento 2</span><span>Hyva</span><span>Laravel</span><span>PHP</span><span>GraphQL</span><span>Shopify</span><span>WordPress</span><span>VMware ESXi</span><span>Active Directory</span><span>AWS</span><span>Azure</span><span>Windows Server</span><span>Linux</span><span>LAN/WAN</span><span>Backups &amp; DR</span><span>Magento 2</span><span>Hyva</span><span>Laravel</span><span>PHP</span><span>GraphQL</span><span>Shopify</span><span>WordPress</span><span>VMware ESXi</span><span>Active Directory</span><span>AWS</span><span>Azure</span><span>Windows Server</span><span>Linux</span><span>LAN/WAN</span><span>Backups &amp; DR</span></div></div>
+
+<section class="expertise" id="expertise">
+  <div class="section-label reveal">What I Do</div>
+  <h2 class="section-title reveal">Two Disciplines, One Engineer</h2>
+  <div class="section-divider reveal"></div>
+  <div class="xp-cards"><div class="xp-card reveal"><div class="xp-ico">🛒</div><h3>E-commerce Development</h3><p>Magento 2 builds, Hyva theme migrations, custom modules, shipping and invoice logic, REST and GraphQL APIs.</p></div><div class="xp-card reveal"><div class="xp-ico">⚙️</div><h3>Laravel &amp; Web Apps</h3><p>Merchant dashboards, internal portals, Shopify stores and WordPress sites with custom plugins.</p></div><div class="xp-card reveal"><div class="xp-ico">🖥️</div><h3>IT Infrastructure</h3><p>LAN/WAN, firewalls, Windows and Linux servers, VMware ESXi, Hyper-V, Active Directory, DNS and DHCP.</p></div><div class="xp-card reveal"><div class="xp-ico">☁️</div><h3>Cloud &amp; Security</h3><p>AWS server migrations, Azure, SAN/NAS backups, disaster recovery, endpoint protection and vulnerability scans.</p></div></div>
+</section>
+
 <!-- ABOUT -->
 <section id="about">
   <div class="about-grid">
@@ -1161,16 +1199,8 @@ footer {
       <div class="section-label">Who I Am</div>
       <h2 class="section-title">About Me</h2>
       <div class="section-divider"></div>
-      <p>
-        I'm a Full Stack Developer based in Lahore, Pakistan, with deep expertise in Magento 2 and Laravel.
-        Over 3.5+ years, I've worked across the full stack — from custom Magento 2 modules
-        and Hyva theme migrations to cloud server administration on Linux Ubuntu.
-      </p>
-      <p>
-        Currently serving as System Support Executive at Mindbridge, I bring both development acumen and
-        IT infrastructure management to every role. I thrive on solving complex e-commerce challenges and
-        delivering clean, maintainable code.
-      </p>
+      <p>I'm a Full Stack Developer and IT Infrastructure Engineer based in Lahore, Pakistan. For 3.5+ years I've built e-commerce platforms with Magento 2, Laravel, Shopify and WordPress for clients in the UK, Saudi Arabia and Australia — from Hyva migrations and custom modules to REST/GraphQL APIs and Cloudways-to-AWS server migrations.</p>
+      <p>Alongside development I work in IT infrastructure — currently at Swift Tech, supporting LAN/WAN networks, Windows and Linux servers, VMware ESXi, Active Directory, backups and security in a BPO environment. That mix lets me ship code and keep the systems underneath it healthy.</p>
       <ul class="contact-list">
         <li><span class="icon">📍</span><div><div style="font-weight:500;color:var(--text-dark)">Location</div><div>Lahore Cantt, Pakistan</div></div></li>
         <li><span class="icon">📞</span><div><div style="font-weight:500;color:var(--text-dark)">Phone</div><a href="tel:03021456550">0302-1456550</a></div></li>
@@ -1180,45 +1210,21 @@ footer {
       </ul>
       <a href="Muhammad_Zohaib_Gulfam_CV.pdf" download="Muhammad_Zohaib_Gulfam_CV.pdf" class="cv-download-btn" style="margin-top:1.5rem;">
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        <span>Download My CV</span>
+        <span>Full Stack CV</span>
       </a>
+      <a href="Muhammad_Zohaib_Gulfam_IT_Infrastructure_CV.pdf" download class="cv-download-btn" style="margin-top:1.5rem;margin-left:.8rem;"><svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg><span>IT Infrastructure CV</span></a>
     </div>
     <div class="skills-side reveal-right">
       <div class="section-label" style="margin-top:0.5rem">Technical Arsenal</div>
       <h2 class="section-title" style="font-size:1.7rem">Skills</h2>
       <div class="section-divider"></div>
-      <div class="skill-category">
-        <div class="skill-category-title">Backend</div>
-        <div class="skill-tags">
-          <span class="skill-tag gold">Magento 2</span><span class="skill-tag gold">Laravel</span>
-          <span class="skill-tag">PHP (OOP)</span><span class="skill-tag">RESTful APIs</span>
-          <span class="skill-tag">GraphQL</span><span class="skill-tag">Eloquent ORM</span>
-          <span class="skill-tag">SMTP Email</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-category-title">Frontend</div>
-        <div class="skill-tags">
-          <span class="skill-tag">HTML5 / CSS3</span><span class="skill-tag">JavaScript ES6+</span>
-          <span class="skill-tag">React.js</span><span class="skill-tag">Vue.js</span>
-          <span class="skill-tag">Bootstrap</span><span class="skill-tag gold">Hyva Framework</span>
-          <span class="skill-tag">Node.js</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-category-title">CMS / eCommerce</div>
-        <div class="skill-tags">
-          <span class="skill-tag gold">Magento 2</span><span class="skill-tag">WordPress</span><span class="skill-tag">Shopify</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-category-title">DevOps & Tools</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Linux Ubuntu</span><span class="skill-tag">Git / GitHub</span>
-          <span class="skill-tag">AWS</span><span class="skill-tag">Cloudways</span>
-          <span class="skill-tag">MySQL</span><span class="skill-tag">Postman</span>
-        </div>
-      </div>
+      <div class="skill-category"><div class="skill-category-title">Backend</div><div class="skill-tags"><span class="skill-tag gold">Magento 2</span><span class="skill-tag gold">Laravel</span><span class="skill-tag">PHP (OOP)</span><span class="skill-tag">RESTful APIs</span><span class="skill-tag">GraphQL</span><span class="skill-tag">Eloquent ORM</span><span class="skill-tag">SMTP Email</span></div></div>
+      <div class="skill-category"><div class="skill-category-title">Frontend</div><div class="skill-tags"><span class="skill-tag">HTML5 / CSS3</span><span class="skill-tag">JavaScript ES6+</span><span class="skill-tag">React.js</span><span class="skill-tag">Vue.js</span><span class="skill-tag">Bootstrap</span><span class="skill-tag gold">Hyva Framework</span><span class="skill-tag">Node.js</span></div></div>
+      <div class="skill-category"><div class="skill-category-title">CMS / eCommerce</div><div class="skill-tags"><span class="skill-tag gold">Magento 2</span><span class="skill-tag">Shopify</span><span class="skill-tag">WordPress</span></div></div>
+      <div class="skill-category"><div class="skill-category-title">Servers &amp; Virtualization</div><div class="skill-tags"><span class="skill-tag">Windows Server</span><span class="skill-tag">Ubuntu / Linux</span><span class="skill-tag gold">VMware ESXi</span><span class="skill-tag">Hyper-V</span><span class="skill-tag gold">Active Directory</span><span class="skill-tag">DNS / DHCP</span></div></div>
+      <div class="skill-category"><div class="skill-category-title">Networking &amp; Storage</div><div class="skill-tags"><span class="skill-tag">LAN / WAN</span><span class="skill-tag">Firewalls</span><span class="skill-tag">Routers &amp; Switches</span><span class="skill-tag">SAN / NAS</span><span class="skill-tag">Backups</span><span class="skill-tag">Disaster Recovery</span></div></div>
+      <div class="skill-category"><div class="skill-category-title">Cloud &amp; DevOps</div><div class="skill-tags"><span class="skill-tag gold">AWS</span><span class="skill-tag">Microsoft Azure</span><span class="skill-tag">Cloudways</span><span class="skill-tag">Git / GitHub / GitLab</span><span class="skill-tag">MySQL</span><span class="skill-tag">Postman</span><span class="skill-tag">Composer</span></div></div>
+      <div class="skill-category"><div class="skill-category-title">IT Ops &amp; Security</div><div class="skill-tags"><span class="skill-tag">Endpoint Protection</span><span class="skill-tag">Vulnerability Scanning</span><span class="skill-tag">Security Patching</span><span class="skill-tag">Monitoring</span><span class="skill-tag">SLA Management</span></div></div>
     </div>
   </div>
 </section>
@@ -1230,74 +1236,43 @@ footer {
     <h2 class="section-title reveal">Work Experience</h2>
     <div class="section-divider reveal"></div>
     <div class="timeline">
-
       <div class="timeline-item reveal">
         <div class="timeline-dot"><span>1</span></div>
         <div class="timeline-body">
-          <div class="job-header">
-            <div class="job-title">System Support Executive</div>
-            <div class="job-period">Oct 2025 – Present</div>
-          </div>
-          <div class="job-company">Mindbridge</div>
-          <ul class="job-points">
-            <li>First and second-line technical support — hardware, software, and network issue resolution</li>
-            <li>Managed incident tickets, ensured SLA compliance, maintained IT documentation</li>
-            <li>System monitoring, health checks, and proactive infrastructure maintenance</li>
-            <li>Configured and deployed workstations and business applications for new employees</li>
-          </ul>
+          <div class="job-header"><div class="job-title">IT Infrastructure &amp; System Support</div><div class="job-period now">Mar 2024 – Present</div></div>
+          <div class="job-company">Swift Tech — BPO / Call Center</div>
+          <ul class="job-points"><li>Supported IT infrastructure operations in a BPO/call center environment</li><li>Designed, configured and monitored LAN/WAN connectivity, firewalls, routers and switches</li><li>Installed, patched and maintained Windows/Linux physical and virtual servers</li><li>Supported Active Directory, DNS and DHCP services for users and infrastructure</li><li>Deployed VMs on VMware ESXi and Hyper-V; worked with AWS and Microsoft Azure environments</li><li>Configured SAN/NAS storage and ran regular backups and disaster recovery activities</li><li>Deployed endpoint protection, ran vulnerability scans and resolved escalated infrastructure incidents</li></ul>
+          <div class="job-tags"><span>VMware ESXi</span><span>Hyper-V</span><span>Active Directory</span><span>LAN/WAN</span><span>AWS</span><span>Azure</span><span>SAN/NAS</span></div>
         </div>
       </div>
 
       <div class="timeline-item reveal">
         <div class="timeline-dot"><span>2</span></div>
         <div class="timeline-body">
-          <div class="job-header">
-            <div class="job-title">Magento 2 / Laravel Full Stack Developer</div>
-            <div class="job-period">Mar 2024 – Oct 2025</div>
-          </div>
+          <div class="job-header"><div class="job-title">Magento 2 / Laravel Full Stack Developer</div><div class="job-period">Mar 2024 – Oct 2025</div></div>
           <div class="job-company">Nexus / Banyo Technology — 1.5 years</div>
-          <ul class="job-points">
-            <li>Led frontend migration of 3 storefronts (banyo.co.uk, premierdiy.co.uk, nexus-home.com) from Porto to Hyva</li>
-            <li>Built a custom UK postal code-based dynamic shipping calculator</li>
-            <li>Developed RESTful and GraphQL APIs for front-end and third-party integrations</li>
-            <li>Migrated full Magento 2 app and database from Cloudways to Cloudflare (zero data loss)</li>
-            <li>Managed Git workflows — branching, pull requests, code reviews on GitHub/GitLab</li>
-          </ul>
+          <ul class="job-points"><li>Led the frontend migration of banyo.co.uk, premierdiy.co.uk and nexus-home.com from Porto to Hyva, improving page speed and Core Web Vitals</li><li>Built a custom product listing grid with extended specs, descriptions and availability</li><li>Developed a UK postal code-based dynamic shipping calculator and configured multiple delivery methods</li><li>Migrated the full Magento 2 app and database from Cloudways to AWS with zero data loss</li><li>Built RESTful and GraphQL APIs; managed Git workflows and code reviews on GitHub/GitLab</li></ul>
+          <div class="job-tags"><span>Magento 2</span><span>Hyva</span><span>GraphQL</span><span>AWS</span><span>Ubuntu</span></div>
         </div>
       </div>
 
       <div class="timeline-item reveal">
         <div class="timeline-dot"><span>3</span></div>
         <div class="timeline-body">
-          <div class="job-header">
-            <div class="job-title">Full Stack Magento 2 / Laravel Developer</div>
-            <div class="job-period">2021 – Mar 2024</div>
-          </div>
-          <div class="job-company">ASquareTec — 2.3 years</div>
-          <ul class="job-points">
-            <li>Built a custom Magento 2 PDF invoice generation module for gozaky.sa</li>
-            <li>Developed a camera-based barcode/QR scanner for warehouse management (the-healthy-grocer.com)</li>
-            <li>Developed MyCellar on Laravel — mobile product-selling platform with full merchant dashboard</li>
-            <li>Deployed helafit.com on Shopify with custom theme and store configuration</li>
-            <li>Built asquaretec.com on WordPress with custom plugins and branded email templates</li>
-          </ul>
+          <div class="job-header"><div class="job-title">IT Support Engineer</div><div class="job-period">2023 – 2025</div></div>
+          <div class="job-company">Abacus Consulting — 2 years</div>
+          <ul class="job-points"><li>Resolved hardware, software and network issues for 100+ end-users</li><li>Built and deployed internal Laravel apps: Attendance Portal and Ticketing Portal</li><li>Deployed and configured Ubuntu servers for internal application hosting</li><li>Performed scheduled backups, security patching and maintenance; implemented access control</li><li>Created IT process documentation and trained staff on new systems</li></ul>
+          <div class="job-tags"><span>Laravel</span><span>Ubuntu</span><span>Backups</span><span>Security</span></div>
         </div>
       </div>
 
       <div class="timeline-item reveal">
         <div class="timeline-dot"><span>4</span></div>
         <div class="timeline-body">
-          <div class="job-header">
-            <div class="job-title">IT Support Engineer</div>
-            <div class="job-period">2023 – 2025</div>
-          </div>
-          <div class="job-company">Abacus Consulting — 2 years</div>
-          <ul class="job-points">
-            <li>Diagnosed and resolved hardware, software, and network issues for 100+ end-users</li>
-            <li>Built and deployed internal Laravel apps: Attendance Portal and Ticketing Portal</li>
-            <li>Deployed and configured Linux Ubuntu servers for internal application hosting</li>
-            <li>Implemented access control measures and security protocols</li>
-          </ul>
+          <div class="job-header"><div class="job-title">Full Stack Magento 2 / Laravel Developer</div><div class="job-period">2021 – Mar 2024</div></div>
+          <div class="job-company">ASquareTec — 2.3 years</div>
+          <ul class="job-points"><li>Built a Magento 2 PDF invoice module and customized the gozaky.sa theme (layout XML, UI components, LESS)</li><li>Built a camera-based barcode/QR scanner for the-healthy-grocer.com with automated SMTP invoice emails</li><li>Developed a Laravel merchant dashboard for products, promotions, themes and store settings</li><li>Deployed helafit.com on Shopify and built asquaretec.com on WordPress with custom plugins</li><li>Managed products, banners and homepage content across multiple client stores</li></ul>
+          <div class="job-tags"><span>Magento 2</span><span>Laravel</span><span>Shopify</span><span>WordPress</span></div>
         </div>
       </div>
     </div>
@@ -1312,10 +1287,10 @@ footer {
 
   <div class="projects-grid">
 
-    <div class="project-card reveal" onclick="openModal('banyo.co.uk / premierdiy.co.uk', 'banyo.mp4')">
+    <div class="project-card reveal" onclick="openModal('banyo.co.uk / premierdiy.co.uk', 'yt:L4h05MsIlOs')">
       <div class="project-video-wrap">
-        <!-- ADD VIDEO: save banyo.mp4 in same folder as HTML, then change src="" to src="banyo.mp4" and delete style="display:none;" -->
-        <video src="banyo.mp4" loop muted autoplay playsinline data-project="banyo"></video>
+        <!-- YouTube: L4h05MsIlOs -->
+        <img src="https://img.youtube.com/vi/L4h05MsIlOs/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" alt="Project Demo" loading="lazy"></video>
         <div class="project-video-placeholder">
           <div class="video-icon">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1338,10 +1313,10 @@ footer {
       </div>
     </div>
 
-    <div class="project-card reveal" onclick="openModal('gozaky.sa', 'gozaky.mp4')">
+    <div class="project-card reveal" onclick="openModal('gozaky.sa', 'yt:SJyKdWScaw4')">
       <div class="project-video-wrap">
-        <!-- ADD VIDEO: save gozaky.mp4 in same folder as HTML, then change src="" to src="gozaky.mp4" and delete style="display:none;" -->
-        <video src="gozaky.mp4" loop muted autoplay playsinline data-project="gozaky"></video>
+        <!-- YouTube: SJyKdWScaw4 -->
+        <img src="https://img.youtube.com/vi/SJyKdWScaw4/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" alt="Project Demo" loading="lazy"></video>
         <div class="project-video-placeholder">
           <div class="video-icon">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1364,10 +1339,10 @@ footer {
       </div>
     </div>
 
-    <div class="project-card reveal" onclick="openModal('The Healthy Grocer', 'grocer.mp4')">
+    <div class="project-card reveal" onclick="openModal('The Healthy Grocer', 'yt:n4DIYVQFpQA')">
       <div class="project-video-wrap">
-        <!-- ADD VIDEO: save grocer.mp4 in same folder as HTML, then change src="" to src="grocer.mp4" and delete style="display:none;" -->
-        <video src="grocer.mp4" loop muted autoplay playsinline data-project="grocer"></video>
+        <!-- YouTube: n4DIYVQFpQA -->
+        <img src="https://img.youtube.com/vi/n4DIYVQFpQA/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" alt="Project Demo" loading="lazy"></video>
         <div class="project-video-placeholder">
           <div class="video-icon">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1391,10 +1366,10 @@ footer {
     </div>
 
     <!-- PROJECT 4 - Helly Hansen -->
-    <div class="project-card reveal" onclick="openModal('Helly Hansen — hellyhansen.com', 'premier.mp4')">
+    <div class="project-card reveal" onclick="openModal('Helly Hansen — hellyhansen.com', 'yt:F5PlbsdClao')">
       <div class="project-video-wrap">
-        <!-- ADD VIDEO: save premier.mp4 in same folder as HTML -->
-        <video src="premier.mp4" loop muted autoplay playsinline data-project="mycellar">
+        <!-- YouTube: F5PlbsdClao -->
+        <img src="https://img.youtube.com/vi/F5PlbsdClao/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" alt="Project Demo" loading="lazy">
         <div class="project-video-placeholder">
           <div class="video-icon">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1447,10 +1422,10 @@ footer {
       </div>
     </div>
 
-    <div class="project-card reveal" onclick="openModal('helafit.com & asquaretec.com', 'helafit.mp4')">
+    <div class="project-card reveal" onclick="openModal('helafit.com & asquaretec.com', 'yt:LMoiesLbkt4')">
       <div class="project-video-wrap">
-        <!-- ADD VIDEO: save helafit.mp4 in same folder as HTML, then change src="" to src="helafit.mp4" and delete style="display:none;" -->
-        <video src="helafit.mp4" loop muted autoplay playsinline data-project="helafit"></video>
+        <!-- YouTube: LMoiesLbkt4 -->
+        <img src="https://img.youtube.com/vi/LMoiesLbkt4/maxresdefault.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" alt="Project Demo" loading="lazy"></video>
         <div class="project-video-placeholder">
           <div class="video-icon">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1521,7 +1496,7 @@ footer {
       </div>
       <div class="contact-item">
         <div class="c-icon">📄</div>
-        <div><div class="c-label">Resume</div><div class="c-value"><a href="Muhammad_Zohaib_Gulfam_CV.pdf" download="Muhammad_Zohaib_Gulfam_CV.pdf" style="color:var(--gold-light);">Download CV (PDF)</a></div></div>
+        <div><div class="c-label">Resume</div><div class="c-value"><a href="Muhammad_Zohaib_Gulfam_CV.pdf" download="Muhammad_Zohaib_Gulfam_CV.pdf" style="color:var(--gold-light);">Full Stack CV</a> &nbsp;·&nbsp; <a href="Muhammad_Zohaib_Gulfam_IT_Infrastructure_CV.pdf" download style="color:var(--gold-light);">IT Infra CV</a></div></div>
       </div>
     </div>
     <div class="form-area reveal-right">
@@ -1601,7 +1576,7 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach(el => observer.observe(el));
 
 // TYPED TEXT
-const phrases = ['Full Stack Developer', 'Magento 2 Expert', 'Laravel Developer', 'IT Support Engineer', 'E-commerce Specialist'];
+const phrases = ['Full Stack Developer','Magento 2 Expert','Laravel Developer','IT Infrastructure Engineer','Cloud & Server Admin'];
 let pi = 0, ci = 0, deleting = false;
 function type() {
   const el = document.getElementById('typedText');
@@ -1656,12 +1631,37 @@ function openModal(title, videoSrc) {
   const modal = document.getElementById('videoModal');
   const vid = document.getElementById('modalVideo');
   const placeholder = document.getElementById('modalPlaceholder');
-  const code = document.getElementById('modalCode');
-  if (videoSrc && videoSrc.trim() !== '') {
+  const area = document.querySelector('.modal-video-area');
+
+  // Remove any existing iframe
+  const oldIframe = document.getElementById('ytFrame');
+  if (oldIframe) oldIframe.remove();
+
+  if (videoSrc && videoSrc.startsWith('yt:')) {
+    const ytId = videoSrc.replace('yt:', '');
+    vid.style.display = 'none';
+    placeholder.style.display = 'none';
+    // Try embed first with privacy-enhanced mode
+    const iframe = document.createElement('iframe');
+    iframe.id = 'ytFrame';
+    iframe.src = `https://www.youtube-nocookie.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1`;
+    iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    area.appendChild(iframe);
+    const yl=document.getElementById('ytLink'); yl.href='https://youtu.be/'+ytId; yl.style.display='inline';
+    
+    // Fallback: if iframe shows error, show watch button
+    iframe.onerror = () => {
+      iframe.remove();
+      placeholder.style.display = 'flex';
+      document.getElementById('modalCode').innerHTML = `<a href="https://youtu.be/${ytId}" target="_blank" style="color:var(--gold-light);font-size:15px;text-decoration:none;padding:10px 20px;border:1px solid var(--gold);border-radius:4px;">▶ Watch on YouTube</a>`;
+    };
+  } else if (videoSrc && videoSrc.trim() !== '') {
     vid.src = videoSrc; vid.style.display = 'block'; placeholder.style.display = 'none'; vid.play();
   } else {
     vid.style.display = 'none'; placeholder.style.display = 'flex';
-    code.textContent = `"${title}" video not set yet — add the video path inside src="" attribute`;
+    document.getElementById('modalCode').textContent = `"${title}" — No video set yet.`;
   }
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -1671,10 +1671,13 @@ document.getElementById('videoModal').addEventListener('click', e => {
   if (e.target === document.getElementById('videoModal')) closeModal();
 });
 function closeModal() {
+  const yl=document.getElementById('ytLink'); if(yl) yl.style.display='none';
   document.getElementById('videoModal').classList.remove('open');
   document.body.style.overflow = '';
   const vid = document.getElementById('modalVideo');
   vid.pause(); vid.src = '';
+  const iframe = document.getElementById('ytFrame');
+  if (iframe) iframe.remove();
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
@@ -1739,6 +1742,12 @@ document.querySelectorAll('.cv-download-btn, .nav-cv-btn').forEach(el => {
     cursor.style.width = '10px'; cursor.style.height = '10px';
     ring.style.width = '36px'; ring.style.height = '36px';
   });
+});
+
+// CARD TILT
+document.querySelectorAll('.xp-card').forEach(c=>{
+  c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(700px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-4px)`});
+  c.addEventListener('mouseleave',()=>{c.style.transform=''});
 });
 
 // FORM SUBMIT
